@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 int main() {
-  int num, ma, max;
+  int num, max;
   int i=2;
 
   printf("Inserisci 10 numeri...\n");
