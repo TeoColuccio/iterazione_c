@@ -6,13 +6,14 @@
 
 int main() {
   int num, max;
-  int i=2;
 
   printf("Inserisci 10 numeri...\n");
 
   printf("Numero 1: ");
   scanf("%d", &num);
   max=num;
+  
+  int i=2;
   while (i <= 10) {
     printf("Numero %d: ", i);
     scanf("%d", &num);
