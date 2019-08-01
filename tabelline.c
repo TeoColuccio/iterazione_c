@@ -7,13 +7,13 @@ int main() {
   int colonna=1;
 
   while (riga <= 10) {
+    colonna=1;
     while (colonna <=10) {
       printf("%5d", riga*colonna);
       colonna++;
     }
     putchar('\n');
     riga++;
-    colonna=1;
   }
 
   return 0;
