@@ -27,8 +27,10 @@ int main() {
     if (num>max1) {
       max2 = max1;
       max1 = num;
-    } else if (num>max2) max2 = num; 
-      i++;
+    } else if (num>max2) {
+      max2 = num;
+    }
+    i++;
    }
  
   printf("I due numeri maggiori sono: %d e %d\n", max1, max2);
