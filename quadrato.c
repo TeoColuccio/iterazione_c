@@ -1,5 +1,5 @@
 /* Il programma prende in input il lato di un quadrato
- * compreso tra 1 e 20 e poi lo disegna con il carattere scelto
+ * compreso tra 1 e 20 e poi lo disegna con il carattere * 
  */
 
 #include <stdio.h>
@@ -9,9 +9,7 @@ int main() {
   int i=0; 
   int j=0;
   
-  char carattere;
-  printf("Inserisci il carattere da utilizzare per il disegno: ");
-  scanf("%c", &carattere);
+  int carattere = '*';
 
   do { 
     printf("Inserisci il valore del lato (min 1, max 20): ");
@@ -19,12 +17,12 @@ int main() {
   } while (lato < 1 || lato > 20);
 
   while (i<lato) {
+    j=0;
     while(j<lato) {
       putchar(carattere);
       j++;
     }
     putchar('\n');
-    j=0;
     i++;
   }
 
