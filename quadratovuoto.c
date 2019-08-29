@@ -19,26 +19,32 @@ int main() {
 
   i = 0;
   while (i<lato) {
-    j = 0;
-    while (j<lato) {
-      if (i == 0 || i==lato-1) { /* Prima ed ultima riga */
-        while (j<lato) {
-          putchar(carattere);
-          j++;
-        }
-      }
-      if (j==0) { /* Prima colonna */
-        putchar(carattere);
-        j++;
-        while (j<lato) {
-          putchar(' '); /* Resto delle colonne */
-          if (j==lato-2) putchar(carattere); /* Ultima colonna */
-          j++;
-        }
-      }
-      putchar('\n');
+    putchar(carattere);
+    i++;
+  }
+  putchar('\n');
+
+  j = 1;
+  while (j < lato-1) {
+    putchar(carattere);
+  
+    i = 1;
+    while (i < lato-1) {
+      putchar(' ');
+      i++; 
+    }
+  putchar(carattere);
+  putchar('\n');
+  j++;    
+  }
+
+  if (lato > 1) {
+    i = 0;
+    while (i < lato) {
+      putchar(carattere);
       i++;
     }
-  }
+    putchar('\n');
+  } 
   return 0;
 }
