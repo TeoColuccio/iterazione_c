@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 int main() {
-    int num, c1, c2, c3, c4; 
+    int num, c1, c2, c3, c4, tmp; 
 
     do {
         printf("Numero da crittografare: ");
@@ -31,7 +31,17 @@ int main() {
     c1 = num % 10;
     c1 = (c1 + 7) % 10; /* Nuova assegnazione di c1 */
 
-    printf("Numero crittografato: %d%d%d%d\n", c3, c4, c1, c2);
+    /* scambio di posizioni*/
+    tmp = c3;
+    c3 = c1;
+    c1 = tmp;
+
+    tmp = c2;
+    c2 = c4;
+    c4 = tmp;
+
+    num = c1 * 1000 + c2 * 100 + c3 * 10 + c4;
+    printf("Numero crittografato: %d\n", num);
 
     return 0;
 }
