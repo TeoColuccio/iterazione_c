@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 int main() {
-int righe, caratteri, spazi;
+  int righe, caratteri, spazi;
   /* Figura a */
   printf("a) \n");
   for (righe = 1; righe <= 10; righe++) {
