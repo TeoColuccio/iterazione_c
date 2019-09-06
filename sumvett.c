@@ -7,7 +7,8 @@
 #include <stdio.h>
 
 int main() {
-  int i, sum = 0, vett[9], media;
+  int i, sum = 0, vett[9];
+  double media;
 
   /* Memorizza gli elementi */
   printf("Inserisci 10 valori interi: \n");
@@ -23,7 +24,7 @@ int main() {
   putchar('\n');
 
   /* Media */ 
-  media = sum / 10;
+  media = (double)sum / 10.0;
 
   /* Stampa dei dati */
   printf("Dati iniziali: \n");
@@ -31,7 +32,7 @@ int main() {
     printf("Numbers[%d] = %d\n", i, vett[i]);
   }
   printf("Somma = %d\n", sum);
-  printf("Media = %d\n", media);
+  printf("Media = %.2f\n", media);
 
   return 0;
 }
