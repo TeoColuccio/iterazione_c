@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 int main() {
-  int i, sum = 0, vett[9];
+  int i, sum = 0, vett[10];
   double media;
 
   /* Memorizza gli elementi */
