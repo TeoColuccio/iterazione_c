@@ -10,7 +10,7 @@ int main() {
   int i, sum = 0, vett[10];
   double media;
 
-  /* Memorizza gli elementi */
+  /* Memorizza 10 elementi */
   printf("Inserisci 10 valori interi: \n");
   for(i = 0; i < 10; i++) {
     printf("? ");
