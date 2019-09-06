@@ -6,8 +6,9 @@
 #include <stdio.h>
 
 int main() {
-  double pi, b;
+  double pi;
   int termini, conta;
+  int segno = +1;
   
   printf("Approssimazione di Pi Greco mediante la serie: \n");
   printf("4 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ...\n");
@@ -15,12 +16,10 @@ int main() {
   printf("Quanti termini vuoi utilizzare? ");
   scanf("%d", &termini);
 
-  b = 1.0;
   pi = 0.0;
-  for (conta = 1; conta <= termini; conta++) {
-    if (conta % 2 == 0) pi -= 4.0/b;
-    else pi += 4.0/b;
-    b+=2.0;
+  for (conta = 0; conta < termini; conta++) {
+    pi += segno * 4./(2.*conta+1);
+    segno = - segno;
   }
 
   printf("pi = %f\n", pi);
