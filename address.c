@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 int main() {
-  int vett[9], i;
+  int vett[10], i;
 
   for(i = 0; i < 10; i++) {
     printf("indirizzo di num[%d]= %p\n", i, (void *)&vett[i]);
