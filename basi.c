@@ -1,85 +1,83 @@
 #include <stdio.h>
 
-void dec_to_bin(int);
-void dec_to_oct(int);
-void dec_to_esa(int);
+int main(void) {
+  int counter, n;
 
-int main() {
-    printf(" N    Bin       Oct  Hex\n");
+  int bit_corrente;
+  int peso;
 
-    for(int i=0; i<=255; i++) {
-        printf("%2d  ", i);
-        printf("  "); 
-        dec_to_bin(i);
-        printf("  "); 
-        dec_to_oct(i);
-        printf("  "); 
-        dec_to_esa(i);
-        printf("\n"); 
+  printf("%5s%10s%5s%4s\n", "N", "Bin", "Oct", "Hex");
+
+  for (counter = 0; counter < 256; counter++) {
+    printf("%5d  ", counter);
+
+    peso = 128;
+    n = counter;
+    for (int i = 0; i < 8; i++) {
+      bit_corrente = n/peso;
+      printf("%d", bit_corrente);
+      n -= bit_corrente*peso;
+      peso /= 2;
     }
 
-    return 0;
-}
+    printf("  ");
 
-void dec_to_bin(int num) {
-    int vett[50];
-    int i;
-
-    for(i=0; i<8; i++) {
-        vett[i] = num % 2;
-        num = num / 2;
+    peso = 64;
+    n = counter;
+    for (int i = 0; i < 3; i++) {
+      bit_corrente = n/peso;
+      printf("%d", bit_corrente);
+      n -= bit_corrente*peso;
+      peso /= 8;
     }
 
-    for(int j=i-1; j>=0; j--) {
-        printf("%d", vett[j]);
-    }
-}
+    printf("  ");
 
-void dec_to_oct(int num) {
-    int vett[50];
-    int i;
-
-    for(i=0; i<3; i++) {
-        vett[i] = num % 8;
-        num = num / 8;
-    }
-
-    for(int j=i-1; j>=0; j--) {
-        printf("%d", vett[j]);
-    }
-}
-
-void dec_to_esa(int num) {
-    int vett[50];
-    int i;
-
-    for(i=0; i<2; i++) {
-        vett[i] = num % 16;
-        num = num / 16;
-    }
-    for(int j=i-1; j>=0; j--) {
-        switch (vett[j]) {
+    peso = 16;
+    n = counter;
+    for (int i = 0; i < 2; i++) {
+      bit_corrente = n/peso;
+      switch(bit_corrente) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+          printf("%d", bit_corrente);
+          break;
         case 10:
-            putchar('A');
-            break;
+          putchar('A');
+          break;
         case 11:
-            putchar('B');
-            break;
+          putchar('B');
+          break;
         case 12:
-            putchar('C');
-            break;
+          putchar('C');
+          break;
         case 13:
-            putchar('D');
-            break;
+          putchar('D');
+          break;
         case 14:
-            putchar('E');
-            break;
+          putchar('E');
+          break;
         case 15:
-            putchar('F');
-            break;
+          putchar('F');
+          break;
         default:
-            printf("%d", vett[j]);
-            break;
-        }
+          putchar('-');
+          break;
+      }
+      n -= bit_corrente*peso;
+      peso /= 16;
     }
+
+    putchar('\n');
+  }
+
+  return 0;
 }
