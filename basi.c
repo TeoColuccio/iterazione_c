@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-  int counter, n;
+  int counter, n, i;
 
   int bit_corrente;
   int peso;
@@ -13,7 +13,7 @@ int main(void) {
 
     peso = 128;
     n = counter;
-    for (int i = 0; i < 8; i++) {
+    for (i = 0; i < 8; i++) {
       bit_corrente = n/peso;
       printf("%d", bit_corrente);
       n -= bit_corrente*peso;
@@ -24,7 +24,7 @@ int main(void) {
 
     peso = 64;
     n = counter;
-    for (int i = 0; i < 3; i++) {
+    for (i = 0; i < 3; i++) {
       bit_corrente = n/peso;
       printf("%d", bit_corrente);
       n -= bit_corrente*peso;
@@ -35,7 +35,7 @@ int main(void) {
 
     peso = 16;
     n = counter;
-    for (int i = 0; i < 2; i++) {
+    for (i = 0; i < 2; i++) {
       bit_corrente = n/peso;
       switch(bit_corrente) {
         case 0:
