@@ -1,3 +1,19 @@
+/* Il programma conta i caratteri, le parole e le righe presenti
+ * in un testo di input.
+ * 
+ * Stati possibili: 
+ * 0: c e' diverso dai caratteri speciali ' ', '\n', '\t'.
+ * 1: e' stato rilevato un carattere speciale, verifico se questo si ripete
+ * 
+ * Stato      Input                 Output      Nuovo stato
+ *   0      c == '\n'               righe++            - 
+ *   0     c != ' ' o '\n' o '\t'     c                -
+ *   0     c == ' ' o '\n' o '\t'   parole++           1
+ *   1     c != ' ' o '\n' o '\t'     -                0
+ *   
+ */
+
+
 #include <stdio.h>
 
 int main() {
