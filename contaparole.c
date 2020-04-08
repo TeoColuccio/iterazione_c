@@ -5,11 +5,11 @@
  * NORM: c e' diverso dai caratteri speciali ' ', '\n', '\t'.
  * CAR: e' stato rilevato un carattere speciale, verifico se questo si ripete
  * 
- * Stato      Input                  Output      Nuovo stato
- *   NORM    c == '\n'               righe++          - 
- *   NORM    c != ' ' o '\n' o '\t'    c              -
- *   NORM    c == ' ' o '\n' o '\t'  parole++        CAR
- *   CAR     c != ' ' o '\n' o '\t'    -            NORM
+ *  Stato      Input                  Output      Nuovo stato
+ *   NORM    c == '\n'                righe++          - 
+ *   NORM    c != ' ', '\n', '\t'        c             -
+ *   NORM    c == ' ' o '\n' o '\t'   parole++        CAR
+ *   CAR     c != ' ', '\n', '\t'        -            NORM
  *   
  */
 
@@ -20,7 +20,7 @@ int main() {
     enum Stato { NORM, CAR };
     int caratteri = 0, parole = 0, righe = 0;
     int c;
-    int stato = 0;
+    int stato = NORM;
 
     while ( (c = getchar()) != EOF) {
         caratteri++;
