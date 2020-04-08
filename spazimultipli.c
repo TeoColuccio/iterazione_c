@@ -5,10 +5,10 @@
  * SPACE: e' stato rilevato il carattere ' ', verifico se questo si ripete
  * 
  * Stato      Input                 Output      Nuovo stato
- *  NORM     c != ' '                  c              - 
- *  NORM     c == ' '                  -            SPACE
- *  SPACE    c != ' '              ' ' + c          NORM
- *  SPACE    c == ' '                  -              - 
+ *  NORM     c != ' '                  c             - 
+ *  NORM     c == ' '                 ' '          SPACE
+ *  SPACE    c != ' '                  c           NORM
+ *  SPACE    c == ' '                  -             - 
  *   
  */
 
