@@ -6,7 +6,6 @@
  * CAR: e' stato rilevato un carattere speciale, verifico se questo si ripete
  * 
  *  Stato      Input                  Output      Nuovo stato
- *   NORM    c == '\n'                righe++          - 
  *   NORM    c != ' ', '\n', '\t'        c             -
  *   NORM    c == ' ' o '\n' o '\t'   parole++        CAR
  *   CAR     c != ' ', '\n', '\t'        -            NORM
