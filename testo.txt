@@ -1,2 +1,9 @@
-ciao pds sd
-dssd
+/* Questo commento contiene "una stringa" l/
+
+/* Questo commento contiene un carattere 'c' */
+
+"Questa stringa contiene un commento\n"
+"/* non sono un vero commento ... */\n"
+"solo a scopo dimostrativo.\n\n"
+"E anche un carattere 'c'!"
+"E una \"stringa\"";
