@@ -7,3 +7,10 @@
 "solo a scopo dimostrativo.\n\n"
 "E anche un carattere 'c'!"
 "E una \"stringa\"";
+
+    /* nello stato C controlla se incontra:
+    '\"' significa inizio di una stringa
+    '\'' significa inizio di apici
+    '/'  potrebbe significare inizio di un commento
+    */
+    ciao '/' ehi
