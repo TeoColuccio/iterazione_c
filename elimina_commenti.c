@@ -46,14 +46,14 @@ int main() {
             }
         }
         else if (stato == APICE) {
-            if (c != '\'') putchar(c);
+        if (c != '\\') putchar(c); 
             else {
                 putchar(c);
                 stato = NORM;
             }
         }
         else if (stato == STR) {
-            if (c != '\"') putchar(c);
+            if (c != '\\') putchar(c);
             else {
                 putchar(c);
                 stato = NORM;

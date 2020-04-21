@@ -13,4 +13,5 @@
     '\'' significa inizio di apici
     '/'  potrebbe significare inizio di un commento
     */
-    ciao '/' ehi
+   hola "\"""/" ciao  "\"" "/" "/" ehi
+
